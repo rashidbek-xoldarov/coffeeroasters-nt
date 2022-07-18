@@ -52,6 +52,7 @@ body {
   line-height: var(--main-line-height);
   color: var(--main-color);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -411,7 +412,6 @@ img {
 .work-inner {
   padding-top: 50px;
   padding-bottom: 50px;
-  text-align: center;
 }
 
 .work-title {
@@ -421,6 +421,7 @@ img {
   font-size: 50px;
   line-height: 59px;
   color: #ffffff;
+  text-align: center;
 }
 
 .rectangle-wrapper {
@@ -488,7 +489,6 @@ img {
   font-weight: 500;
   font-size: 40px;
   line-height: 47px;
-  font-variant: small-caps;
   color: #333333;
   text-transform: uppercase;
 }
@@ -547,6 +547,7 @@ img {
 
 /* About */
 .intro {
+  margin-bottom: 20px;
   background-image: url("../images/hero-bg.jpg");
   background-position: top center;
 }
@@ -805,4 +806,216 @@ img {
 
 .branch-item-info-list-text {
   margin: 0;
+}
+
+.plan-work-list::before {
+  display: none;
+}
+
+/* Order */
+.order {
+  position: relative;
+  background-image: url("../images/collection-bg.jpg");
+  background-position: top center;
+}
+
+.order::before {
+  position: absolute;
+  right: calc(50% + 600px);
+  bottom: 25px;
+  display: block;
+  width: 371px;
+  height: 371px;
+  content: "";
+  background-image: url("../images/leaf-first.svg");
+}
+
+.order::after {
+  position: absolute;
+  left: calc(50% + 600px);
+  top: 300px;
+  display: block;
+  width: 371px;
+  height: 371px;
+  content: "";
+  background-image: url("../images/leaf-second.svg");
+}
+
+.order-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order-item {
+  margin-bottom: 29px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  font-variant: small-caps;
+  color: #555555;
+  text-transform: uppercase;
+}
+
+.order-item-link {
+  display: inline-block;
+  padding-bottom: 5px;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed #f5f5fd;
+}
+
+.order-item-link:active {
+  color: #000;
+  border-bottom: 1px dashed #c99b67;
+}
+
+.order-choose {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+  margin-bottom: 100px;
+  padding: 0;
+  list-style: none;
+}
+
+.question-item {
+  width: 660px;
+}
+
+.question-item:not(:first-child) {
+  margin-top: 60px;
+}
+
+.question-item-link {
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+.question-item-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  color: #000000;
+}
+
+.question-item-title:hover {
+  cursor: pointer;
+}
+
+.ingrediend-list {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  transition: 0.8s ease;
+}
+
+.ingrediend-list-block {
+  display: flex;
+  transition: 0.8s ease;
+}
+
+.ingredient-item {
+  padding: 30px 15px;
+  width: 206px;
+  height: 220px;
+  background-color: #c4dacd;
+}
+
+.ingredient-item:hover {
+  background-color: #0a775f;
+}
+
+.ingredient-item:hover .ingredient-item-title,
+.ingredient-item:hover .ingredient-item-text {
+  color: #fff;
+}
+
+.ingredient-item-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #333;
+}
+
+.ingredient-item-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.order-summary {
+  width: 660px;
+  margin-bottom: 20px;
+  padding: 40px 20px;
+  background-color: #c99b67;
+}
+
+.order-summary-title {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.order-summary-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  color: #ffffff;
+}
+
+.form-input {
+  display: inline-block;
+  width: 70px;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.order-summary-link {
+  display: inline-block;
+  margin-left: auto;
+  padding: 16px 24px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-decoration: none;
+  background: #0a775f;
+  border-radius: 100px;
 }
